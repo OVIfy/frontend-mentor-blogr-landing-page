@@ -21,6 +21,22 @@ desktop_nav_items.forEach(element => {
 
 // document.addEventListener('mouseleave')
 
+document.addEventListener('click',(e)=>{
+    let clicked = false;
+    desktop_menu_box.forEach(element =>{
+        if(element === e.target){
+            clicked = true;
+        }
+    })
+
+    if(clicked !== true){
+        desktop_nav_items.forEach(element =>{
+            element.classList.remove('visible')
+        })
+    }
+    
+})
+
 desktop_menu_box.forEach(element=>{
     element.addEventListener('mouseleave',()=>{
        element.parentElement.classList.remove('visible')
