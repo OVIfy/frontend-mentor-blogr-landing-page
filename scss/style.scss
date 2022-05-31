@@ -1,0 +1,834 @@
+//primary
+
+$LightredCTAtext: hsl(356, 100%, 66%);
+$VerylightredCTAhoverbackground: hsl(355, 100%, 74%);
+$Verydarkblueheadings: hsl(208, 49%, 24%);
+
+//neutral
+
+$Whitetext: hsl(0, 0%, 100%);
+$Grayishbluefootertext: hsl(240, 2%, 79%);
+$Verydarkgrayishbluebodycopy: hsl(207, 13%, 34%);
+$Verydarkblackbluefooterbackground: hsl(240, 10%, 16%);
+
+//gradients
+
+$Verylightred: hsl(13, 100%, 72%);
+$Lightred: hsl(353, 100%, 62%);
+
+$Verydarkgrayblue: hsl(237, 17%, 21%);
+$Verydarkdesaturatedblue: hsl(237, 23%, 32%);
+
+//fonts
+
+$tinyFont : 12px;
+$biggestFont: 30px;
+
+//note-to-self inheritance scss
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+
+
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+    .hero-img-container{
+         position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: no-repeat bottom 50% right 150% / 130% url('/images/bg-pattern-intro-desktop.svg');
+           
+        }
+        
+        width: 100%;
+        background-color: salmon;
+        border-radius: 0 0 0 10vh;
+        background: linear-gradient(90deg,$Verylightred,$Lightred);
+       
+        
+        
+        
+        .nav-container{
+                  color: white;
+                  display: flex;
+                  justify-content: center;
+                 
+             .inner-nav-container{
+               
+                 flex-basis: 1000px;
+                 position: relative;
+                .mobile-nav-container{
+                    display: none;
+                }
+                .desktop-nav-container{
+                    
+                   .logo{
+                            display: inline-block;
+                            margin-left: 2vw;
+                            margin-top: 5vh;
+                         }
+                         .desktop-nav{
+                            font-size: $tinyFont;
+                             display: inline-block;
+                             margin-left: 4vw;  
+                             
+                             
+
+                             .nav-item{
+                                 display: inline-flex;
+                                 margin-right: 2vw;
+                                 flex-direction: row;
+                                 position: relative;
+                                 align-items: center;
+                                 justify-content: center;
+                                  .dropdown-arrow{
+                                      display: inline-block;
+                                      margin-left: 4px;
+                                      transform: rotate(180deg);
+                                    }
+                                  .menu-box{
+                                     border-radius: 5px;
+                                     z-index: 1;
+                                     position: absolute;
+                                     left: 0;
+                                     top: 30px;
+                                     background-color: white;
+                                     color: rgb(115, 115, 115);
+                                     padding: 10px 30px 10px 10px;
+                                     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.2);
+                                     display: none;
+
+                                 
+                                     .menu-box-item{
+                                         display: block;
+                                         margin: 5px;
+
+                                         &:hover{
+                                             color: black;
+                                         }
+                                        }
+
+                                 }
+
+                                //  &:hover > .menu-box{
+                                //      display: inline-block;
+                                //  }
+
+                                 &.visible > .menu-box{
+                                    display: inline-block;
+                                }
+
+                                &.visible > .dropdown-arrow{
+                                    animation: rotateArrow 0.2s ease-in-out forwards;
+                                }
+
+                                &:hover{
+                                    cursor: pointer;
+
+                                    
+                                }
+                             }
+                         }
+                  
+      
+                       .buttons{
+                        position: absolute;
+                        right: 2vw;
+                        display: inline-block;
+                        margin-top: 5vh;
+                        .btn{
+                            border-radius: 45px;
+                             padding: 0.3rem 0.5rem;
+                            font-size: $tinyFont;
+                            border: none;
+                            background-color: transparent;
+                            color: white;
+                            &.login{
+                                color: white;
+                            }
+                            &.sign-up{
+                                color: $Lightred;
+                                background-color: white;
+
+                                &:hover{
+                                    cursor: pointer;
+                                    background-color: $VerylightredCTAhoverbackground;
+                                    color: white;
+                                }
+                            }
+                        }
+                
+                       }
+                    
+                  }
+
+                  
+             }
+            
+          
+        
+        }
+
+        .hero-center-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            margin-top: 10vh;
+            position: relative;
+           .modern{
+              font-size: $biggestFont;
+              margin-bottom: 2vh;
+           }
+           .show{
+              font-size: $tinyFont;
+              margin-bottom: 3vh;
+           }
+           .buttons{
+               margin-bottom: 5rem;
+               
+               .btn{
+            
+                    border-radius: 45px;
+                    padding: 0.3rem 0.5rem;
+                    font-size: $tinyFont;
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+                  &.start{
+                    background-color: $Whitetext;
+                    color: $Lightred;
+                    &:hover{
+                        background-color: $VerylightredCTAhoverbackground;
+                        color: white;
+                        cursor: pointer;
+                    }
+                    
+                   }
+                   &.learn{
+                    border: 0.01px solid $Whitetext;
+                    box-sizing: border-box;
+                    &:hover{
+                        background-color: white;
+                        color: $Lightred;
+                        cursor: pointer;
+                    }
+                   }
+               }
+               
+    
+           }
+        }
+    }
+
+    .designed-for-the-future{
+     
+        position: relative;
+        right: -15vw;
+        color: $Verydarkblueheadings;
+        
+        h2{
+            text-align: center;
+            position: relative;
+            left: -10vw;
+            margin: 60px 0 0 0;
+        }
+        .text-content-and-img{
+            
+            display: flex;
+            align-items: center;
+            .text-content{
+              
+                .text-section{
+               
+                    h3{
+                      margin: 20px 0;
+                      
+                      
+                    }
+        
+                    p{
+                      font-size: $tinyFont;
+                      
+                    }
+        
+                    &.one{
+                 
+                    }
+                    &.two{
+                       
+                    }
+                }
+            }
+        }
+        
+        
+
+        .svg{
+            width: 50%;
+         
+           
+            position: relative;
+         
+ 
+        }
+    }
+
+
+    .state-of-the-art{
+        color: white;
+        position: relative;
+        display: flex;
+        align-items: center;
+        img{
+          
+           position: relative;
+           
+           width: 50%;
+        }
+        .text-section{
+           position: relative;
+           margin-right: 30px;
+            h2{
+              margin: 20px 0;
+              
+            }
+            p{
+              font-size: $tinyFont;
+            }
+        }
+
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 75%;
+            position: absolute;
+            background-color: $Verydarkblueheadings;
+            border-radius: 0 80px 0 80px;
+        }
+   
+    }
+
+    .no-heading{
+        display: flex;
+        align-items: center;
+        color: $Verydarkblueheadings;
+        position: relative;
+        
+        width: 115vw;
+        left: -15vw;
+        img{
+          width: 50%;
+        }
+        .text-section{
+            margin-right: 5vw;
+            h3{
+              margin: 20px 0;
+            }
+            p{
+                margin:0 0 30px 0;
+                font-size: $tinyFont;
+            }
+        }
+    }
+
+    footer{
+        color: white;
+        background-color: $Verydarkblackbluefooterbackground;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 60px 0;
+        border-radius: 0px 40px 0 0;
+        h1{
+
+        }
+
+        ul{
+            
+            li{
+                list-style-type: none;
+                font-size: $tinyFont;
+                margin: 10px 0;
+                display: flex;  //how did this line center the after element of the a tag
+                
+                a{
+                    color: white;
+                    text-decoration: none;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        width: 0%;
+                        height: 10%;
+                        
+                        bottom: -4px;
+                        background-color: white;
+                        transition: all 0.2s ease-out;
+                        
+                    }
+
+                    &:hover{
+                        &::after{
+                            content: '';
+                            display: inline-block;
+                            position: absolute;
+                            width: 100%;
+                            height: 10%;
+                            
+                            bottom: -4px;
+                            background-color: white;
+                        }
+                    }
+                }
+
+                &:first-child{
+                    margin-bottom: 40px;
+                    font-weight: 900;
+                    a{
+                        &::after{
+                         display: none;
+                        } 
+                        
+                    }
+                }
+
+              
+            }
+        }
+    }
+
+    
+} //body closing tag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:500px){
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    body{
+    
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        overflow-x: hidden;
+        .hero-img-container{
+             position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background: no-repeat bottom 50% right 150% / 130% url('/images/bg-pattern-intro-desktop.svg');
+               
+            }
+            
+            width: 100%;
+            background-color: salmon;
+            border-radius: 0 0 0 10vh;
+            background: linear-gradient(90deg,$Verylightred,$Lightred);
+           
+            
+            
+            
+            .nav-container{
+                      color: white;
+                      display: flex;
+                      justify-content: center;
+                     
+                 .inner-nav-container{
+                   
+                     flex-basis: 1000px;
+                     position: relative;
+                     
+                     .mobile-nav-container{
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                          
+                         .logo{
+                             position: absolute;
+                             left: 10px;
+                             top: 20px;
+                         }
+
+                         .nav-btn{
+                             display: inline-block;
+                             position: absolute;
+                             right: 10px;
+                             top: 20px;
+                             width: 50px;
+                             height: 40px;
+                             background:no-repeat center center url('/images/icon-hamburger.svg');
+                             border: 1px solid transparent;
+
+                             &:hover{
+                                 cursor: pointer;
+                             }
+                         }
+
+                         .nav-list{
+                                // display: flex;
+                                // flex-direction: column;
+                                // justify-content: center;
+                                // align-items: center;
+                                background-color: white;
+                                display: none;
+                                width: 80%;
+                                box-shadow: 2px 0px 30px rgba(0, 0, 0, 0.4);
+                                border-radius: 5px;
+                                position: absolute;
+                                z-index: 2;
+                                top: 80px;
+                            .nav-item{
+                                   list-style-type: none;
+                                   text-align: center;
+                                   color: $Verydarkblueheadings;
+                                   margin: 20px 0;
+                                   .dropdown-arrow{
+                                       color: $Lightred;
+                                       display: inline-block;
+                                       transform: rotate(180deg);
+                                       margin-left: 5px;
+                                   }
+                                .menu-box{
+                                      margin-top: 10px;
+                                      display: inline-block;
+                                      background-color: rgb(243, 243, 243);
+                                      width: 80%;
+                                      border-radius: 5px;
+                                      display: none;
+                                    .menu-box-item{
+                                        list-style-type: none;
+                                        margin: 10px 0;
+                                    }
+                                }
+
+                                &:hover {
+                                    cursor: pointer;
+
+                                   
+                                }
+
+                                &.visible{
+                                    & > .dropdown-arrow{
+                                        animation: rotateArrow 0.2s ease-in-out forwards;
+                                    }
+ 
+                                    & >  .menu-box{
+                                     display: inline-block;
+                                    }
+
+                                }
+
+                                
+                            }
+
+                            .nav-buttons{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                                hr{
+                                    width: 90%;
+                                    border: 0.5px solid rgb(241, 241, 241);
+                                }
+                                .btn{
+                                     padding: 10px 30px;
+                                     border: none;
+                                     margin: 10px 0;
+                                     font-weight: 600;
+                                     color: $Verydarkblueheadings;
+                                    &.login{
+                                       background-color: transparent;
+                                       
+                                    }
+    
+                                    &.signUp{
+                                       margin-bottom: 20px;
+                                       background:linear-gradient(45deg,$Verylightred,$LightredCTAtext);
+                                       border-radius: 20px;
+                                       color: white;
+                                    }
+
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                         }
+
+                         &.visible > .nav-list{
+                             display: inline-block;
+                         }
+
+                         
+                         &.visible > .nav-btn{
+                            background:no-repeat center center url('/images/icon-close.svg');
+                            
+                        }
+                     } 
+                    .desktop-nav-container{
+                        display: none;
+                       .logo{
+                                display: inline-block;
+                                margin-left: 2vw;
+                                margin-top: 5vh;
+                             }
+                             .desktop-nav{
+                                font-size: $tinyFont;
+                                 display: inline-block;
+                                 margin-left: 4vw;
+                                 li{
+                                     display: inline-block;
+                                     margin-right: 2vw;
+                                 }
+                             }
+                      
+          
+                           .buttons{
+                            border-radius: 45px;
+                             padding: 0.3rem 0.5rem;
+                            font-size: $tinyFont;
+                            border: none;
+                            background-color: transparent;
+                            color: white;
+                            &.login{
+                                color: white;
+                            }
+                            &.sign-up{
+                                color: $Lightred;
+                                background-color: white;
+                            }
+                    
+                           }
+                        
+                      }
+                 }
+                
+              
+            
+            }
+    
+            .hero-center-content{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 70vh;
+            }
+        }
+    
+        .designed-for-the-future{
+         
+            position: relative;
+            right: 0;
+            color: $Verydarkblueheadings;
+            display: flex;
+            flex-direction: column;
+            h2{
+                text-align: center;
+                position: relative;
+                left: 0;
+                margin: 60px 0 0 0;
+            }
+            .text-content-and-img{
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                .text-content{
+                  
+                    .text-section{
+                        margin:0 30px;
+                        h3{
+                          margin: 20px 0;
+                          
+                          
+                        }
+            
+                        p{
+                          font-size: $tinyFont;
+                          
+                        }
+            
+                        &.one{
+                     
+                        }
+                        &.two{
+                           
+                        }
+                    }
+                }
+            }
+            
+            
+    
+            .svg{
+                width: 80%;
+                position: relative;
+                order: -1;
+                margin: 20px 0;
+            }
+        }
+    
+    
+        .state-of-the-art{
+            flex-direction: column;
+            align-items: center;
+            img{
+              position: relative;
+               width: 70%;
+            }
+            .text-section{
+               position: relative;
+               margin:0 30px;
+               padding:0 20px;
+               text-align: center;
+                h2{
+                  margin: 10px 0;
+                }
+                p{
+                  margin-bottom: 40px;
+                }
+            }
+    
+            &::before{
+                content: '';
+                display: inline-block;
+                height: 70%;
+                position: absolute;
+                bottom: 0;
+                border-radius: 0 70px 0 70px;
+            }
+       
+        }
+
+        .no-heading{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            margin: 40px 0;
+            img{
+              width: 90%;
+            }
+            .text-section{
+                
+                h3{
+                  margin: 20px 0;
+                }
+                p{
+                    margin:0 10px 30px 10px;
+                }
+            }
+        }
+
+
+
+        footer{
+            color: white;
+            background-color: $Verydarkblackbluefooterbackground;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 0;
+            border-radius: 0px 70px 0 0;
+            flex-direction: column;
+            
+            h1{
+    
+            }
+    
+            ul{
+                 li{
+                    
+                    display: flex;
+                    justify-content: center;
+                      //how did this line center the after element of the a tag
+                   
+                    
+                    a{
+                        
+                        display: flex;
+                        justify-content: center;
+                        
+                        &::after{
+                 
+                            
+                        }
+    
+                        &:hover{
+                            &::after{
+                      
+                            }
+                        }
+                    }
+    
+                    &:first-child{
+                        margin-bottom: 40px;
+                        font-weight: 900;
+                        margin-top: 40px;
+                        a{
+                            &::after{
+                             display: none;
+                            } 
+                            
+                        }
+                    }
+    
+                  
+                }
+            }
+        }
+    
+        
+    } //body closing tag
+}
+
+
+///////////////////////////////////////////animations////////////////////////////////
+
+
+@keyframes rotateArrow{
+    from{transform: rotate(180deg);}
+    to{transform: rotate(0deg);}
+}
+
