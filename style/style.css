@@ -456,6 +456,17 @@ body footer ul li:first-child a::after {
     text-align: center;
     height: 70vh;
   }
+  body .hero-img-container .hero-center-content .buttons .btn {
+    font-size: 15px;
+  }
+  body .hero-img-container .hero-center-content .buttons .btn.start {
+    width: 100px;
+    height: 50px;
+  }
+  body .hero-img-container .hero-center-content .buttons .btn.learn {
+    width: 100px;
+    height: 50px;
+  }
   body .designed-for-the-future {
     position: relative;
     right: 0;

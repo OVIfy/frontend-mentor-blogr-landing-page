@@ -650,6 +650,21 @@ body{
                 justify-content: center;
                 text-align: center;
                 height: 70vh;
+
+                .buttons{
+                     
+                    .btn{
+                          font-size: 15px;
+                        &.start{
+                          width: 100px;
+                          height: 50px;
+                        }
+                        &.learn{
+                            width: 100px; 
+                            height: 50px;
+                        }
+                    }
+                }
             }
         }
     
