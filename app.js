@@ -1,6 +1,6 @@
 const desktop_nav_items = document.querySelectorAll('.desktop-nav .nav-item')
 const desktop_menu_box = document.querySelectorAll('.desktop-nav .nav-item .menu-box')
-const android_nav_items = document.querySelectorAll('.mobile-nav-container .nav-item')
+const android_nav_items = document.querySelectorAll('.mobile-nav-container .nav-item a')
 const nav_btn = document.querySelector('.nav-btn')
 const android_nav_container = document.querySelector('.mobile-nav-container')
 
@@ -69,7 +69,7 @@ nav_btn.addEventListener('click',()=>{
 
 android_nav_items.forEach(element =>{
     element.addEventListener('click',()=>{
-        element.classList.toggle('visible')
+        element.parentElement.classList.toggle('visible')
     })
 })
 

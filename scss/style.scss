@@ -30,6 +30,8 @@ $biggestFont: 30px;
     padding: 0px;
     margin: 0px;
     font-family: 'Ubuntu', sans-serif;
+
+  
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -44,7 +46,7 @@ html,body{
 
 body{
 
-
+ 
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
@@ -538,12 +540,17 @@ body{
                                    text-align: center;
                                    color: $Verydarkblueheadings;
                                    margin: 20px 0;
-                                   .dropdown-arrow{
-                                       color: $Lightred;
-                                       display: inline-block;
-                                       transform: rotate(180deg);
-                                       margin-left: 5px;
+                                   a{
+                                     text-decoration: none;
+                                      color: inherit;
+                                    .dropdown-arrow{
+                                        color: $Lightred;
+                                        display: inline-block;
+                                        transform: rotate(180deg);
+                                        margin-left: 5px;
+                                    }
                                    }
+                                 
                                 .menu-box{
                                       margin-top: 10px;
                                       display: inline-block;
@@ -564,7 +571,7 @@ body{
                                 }
 
                                 &.visible{
-                                    & > .dropdown-arrow{
+                                    & .dropdown-arrow{
                                         animation: rotateArrow 0.2s ease-in-out forwards;
                                     }
  

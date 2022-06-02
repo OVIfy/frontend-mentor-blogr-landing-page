@@ -369,7 +369,11 @@ body footer ul li:first-child a::after {
     color: hsl(208deg, 49%, 24%);
     margin: 20px 0;
   }
-  body .hero-img-container .nav-container .inner-nav-container .mobile-nav-container .nav-list .nav-item .dropdown-arrow {
+  body .hero-img-container .nav-container .inner-nav-container .mobile-nav-container .nav-list .nav-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+  body .hero-img-container .nav-container .inner-nav-container .mobile-nav-container .nav-list .nav-item a .dropdown-arrow {
     color: hsl(353deg, 100%, 62%);
     display: inline-block;
     transform: rotate(180deg);
@@ -390,7 +394,7 @@ body footer ul li:first-child a::after {
   body .hero-img-container .nav-container .inner-nav-container .mobile-nav-container .nav-list .nav-item:hover {
     cursor: pointer;
   }
-  body .hero-img-container .nav-container .inner-nav-container .mobile-nav-container .nav-list .nav-item.visible > .dropdown-arrow {
+  body .hero-img-container .nav-container .inner-nav-container .mobile-nav-container .nav-list .nav-item.visible .dropdown-arrow {
     animation: rotateArrow 0.2s ease-in-out forwards;
   }
   body .hero-img-container .nav-container .inner-nav-container .mobile-nav-container .nav-list .nav-item.visible > .menu-box {
