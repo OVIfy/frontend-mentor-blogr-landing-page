@@ -9,15 +9,34 @@ const android_nav_container = document.querySelector('.mobile-nav-container')
 
 
 desktop_nav_items.forEach(element => {
-    element.addEventListener('mouseover',()=>{
-        desktop_nav_items.forEach(element =>{
-            element.classList.remove('visible') //remove visible class from all menu items
+    element.addEventListener('mouseover',makeMenuBoxVisibleOnHover(element))
+
+    element.addEventListener('click',()=>{
+       if(element.classList.contains('visibl')){
+        desktop_nav_items.forEach(element=>{
+            element.classList.remove('visibl')
         })
 
-        element.classList.add('visible') //make only the one that is hovered on visible
-       
+        element.classList.remove('visibl')
+       } 
+       else{
+        desktop_nav_items.forEach(element=>{
+            element.classList.remove('visibl')
+        })
+
+        element.classList.add('visibl')
+       }
+    
+        
     })
+
+
+  
 });
+
+
+
+
 
 // document.addEventListener('mouseleave')
 
@@ -32,6 +51,7 @@ document.addEventListener('click',(e)=>{
     if(clicked !== true){
         desktop_nav_items.forEach(element =>{
             element.classList.remove('visible')
+            
         })
     }
     
@@ -52,4 +72,27 @@ android_nav_items.forEach(element =>{
         element.classList.toggle('visible')
     })
 })
+
+function makeMenuBoxVisibleOnHover(element) {
+    return () => {
+        desktop_nav_items.forEach(element => {
+            element.classList.remove('visible') //remove visible class from all menu items
+        })
+
+        element.classList.add('visible')
+
+    }
+}
+
+function makeMenuBoxVisibleOnClick(element) {
+    return () => {
+        desktop_nav_items.forEach(element => {
+            element.classList.remove('visible') //remove visible class from all menu items
+        })
+
+        element.classList.add('visible')
+
+
+    }
+}
 

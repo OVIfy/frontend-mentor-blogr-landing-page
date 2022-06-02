@@ -1,11 +1,19 @@
 * {
   padding: 0px;
   margin: 0px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass", sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  overflow-x: hidden;
 }
 body .hero-img-container {
   position: relative;
@@ -81,6 +89,12 @@ body .hero-img-container .nav-container .inner-nav-container .desktop-nav-contai
   display: inline-block;
 }
 body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item.visible > .dropdown-arrow {
+  animation: rotateArrow 0.2s ease-in-out forwards;
+}
+body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item.visibl > .menu-box {
+  display: inline-block;
+}
+body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item.visibl > .dropdown-arrow {
   animation: rotateArrow 0.2s ease-in-out forwards;
 }
 body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item:hover {
