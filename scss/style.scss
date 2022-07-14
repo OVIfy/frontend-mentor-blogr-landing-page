@@ -46,7 +46,10 @@ html,body{
 
 body{
 
- 
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     

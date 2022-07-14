@@ -15,6 +15,10 @@ html, body {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+body a {
+  text-decoration: none;
+  color: inherit;
+}
 body .hero-img-container {
   position: relative;
   width: 100%;
