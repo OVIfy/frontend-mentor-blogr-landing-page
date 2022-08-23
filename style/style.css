@@ -69,6 +69,10 @@ body .hero-img-container .nav-container .inner-nav-container .desktop-nav-contai
   display: inline-block;
   margin-left: 4px;
   transform: rotate(180deg);
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  background: no-repeat center center/contain url("../images/icon-arrow-light.svg");
 }
 body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item .menu-box {
   border-radius: 5px;
@@ -92,13 +96,13 @@ body .hero-img-container .nav-container .inner-nav-container .desktop-nav-contai
 body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item.visible > .menu-box {
   display: inline-block;
 }
-body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item.visible > .dropdown-arrow {
+body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item.visible > a > .dropdown-arrow {
   animation: rotateArrow 0.2s ease-in-out forwards;
 }
 body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item.visibl > .menu-box {
   display: inline-block;
 }
-body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item.visibl > .dropdown-arrow {
+body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item.visibl > a > .dropdown-arrow {
   animation: rotateArrow 0.2s ease-in-out forwards;
 }
 body .hero-img-container .nav-container .inner-nav-container .desktop-nav-container .desktop-nav .nav-item:hover {
@@ -383,6 +387,10 @@ body footer ul li:first-child a::after {
     display: inline-block;
     transform: rotate(180deg);
     margin-left: 5px;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    background: no-repeat center center/contain url("../images/icon-arrow-dark.svg");
   }
   body .hero-img-container .nav-container .inner-nav-container .mobile-nav-container .nav-list .nav-item .menu-box {
     margin-top: 10px;

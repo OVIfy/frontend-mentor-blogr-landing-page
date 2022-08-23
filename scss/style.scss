@@ -111,6 +111,10 @@ body{
                                       display: inline-block;
                                       margin-left: 4px;
                                       transform: rotate(180deg);
+                                      width: 10px;
+                                      height: 10px;
+                                      background-color: red;
+                                      background: no-repeat center center/contain url('../images/icon-arrow-light.svg');
                                     }
                                   .menu-box{
                                      border-radius: 5px;
@@ -144,7 +148,7 @@ body{
                                     display: inline-block;
                                 }
 
-                                &.visible > .dropdown-arrow{
+                                &.visible > a > .dropdown-arrow{
                                     animation: rotateArrow 0.2s ease-in-out forwards;
                                 }
 
@@ -152,7 +156,7 @@ body{
                                     display: inline-block;
                                 }
 
-                                &.visibl > .dropdown-arrow{
+                                &.visibl > a > .dropdown-arrow{
                                     animation: rotateArrow 0.2s ease-in-out forwards;
                                 }
 
@@ -552,7 +556,11 @@ body{
                                         display: inline-block;
                                         transform: rotate(180deg);
                                         margin-left: 5px;
-                                    }
+                                        width: 10px;
+                                        height: 10px;
+                                        position: relative;
+                                        background: no-repeat center center/contain url('../images/icon-arrow-dark.svg');
+                                     }
                                    }
                                  
                                 .menu-box{

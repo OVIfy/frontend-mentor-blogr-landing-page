@@ -51,7 +51,7 @@ document.addEventListener('click',(e)=>{
     if(clicked !== true){
         desktop_nav_items.forEach(element =>{
             element.classList.remove('visible')
-            
+            // element.classList.remove('visibl')
         })
     }
     
@@ -60,6 +60,7 @@ document.addEventListener('click',(e)=>{
 desktop_menu_box.forEach(element=>{
     element.addEventListener('mouseleave',()=>{
        element.parentElement.classList.remove('visible')
+       element.parentElement.classList.remove('visibl')
     })
 })
 
